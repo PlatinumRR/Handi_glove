@@ -1,17 +1,60 @@
 #include "pwm.h"
 #include "tim.h"
 
-#define PWM_DUTY 1000
 
-uint8_t _HEATING	= 1;
-uint8_t	_COOLING	= 0;
+void FourPtAvg(uint8_t N, uint8_t * ADC_data, uint8_t ADC_data_buffer[][5], uint8_t * _ADC_buffer_pt, uint8_t * avg_data){
+	uint16_t temp;
+	for(int i=0; i<N; i++){
+		ADC_data_buffer[*_ADC_buffer_pt][i] = ADC_data[i];
+		temp=0;
+		for(int j=0; j<4; j++){
+			//sum up
+			temp += ADC_data_buffer[j][i];
+		}
+		//do avg
+		temp = temp >> 2;
+		avg_data[i] = temp;
+	}
+	*_ADC_buffer_pt += 1;
+}
 
+void PWM_Peltier_Control(uint8_t * avg_in_data, uint8_t * avg_fb_data, int * errorSum){
+	int PWM;
+	int tempPWM;
+	uint16_t PeltierN = 1;
+	int e;
+	uint8_t HC = _COOLING;
+	for(int i=0; i<5; i++){
+			e = TemperatureLinearizeTable[avg_in_data[i]]-TemperatureLinearizeTable[avg_fb_data[i]];
+			errorSum[i] = errorSum[i]+e;
+			//limit the maximum number
+			if (errorSum[i]>10000){errorSum[i]=10000;}
+			else if(errorSum[i]<-10000){errorSum[i]=-10000;}
 
-uint16_t	_PELTIER_1 =	0x01;
-uint16_t	_PELTIER_2 =	0x02;
-uint16_t	_PELTIER_3 =	0x04;
-uint16_t	_PELTIER_4 =	0x08;
-uint16_t	_PELTIER_5 =	0x10;
+			tempPWM = P_H*e + I_H*(errorSum[i])/I_D_H;
+			//choose Heating or Cooling and limit the PWM duty below period
+			if(tempPWM>PWM_PERIOD) {
+				PWM=PWM_PERIOD;
+				HC = _HEATING;
+			}else if(tempPWM>0) {
+				PWM=tempPWM;
+				HC = _HEATING;
+			}else if(tempPWM>(PWM_PERIOD *(-1))) {
+				PWM=tempPWM*(-1);
+				HC = _COOLING;
+			}else {
+				PWM= PWM_PERIOD*(-1);
+				HC = _COOLING;
+			}PWM_Peltier_SetPWM(PeltierN, _HEATING, PWM);
+
+			PWM_Peltier_SetPWM(PeltierN, HC, PWM);
+
+//			PWM_Peltier_SetPWM(PeltierN, _COOLING, 0);
+
+		PWM_Peltier_Start(PeltierN);
+		PeltierN = PeltierN << 1; //switch to next Peltier Cooler
+	}
+}
 
 void PWM_Peltier_SetPWM(uint16_t PeltierN, uint8_t HC, uint16_t PWM){
 	if(PeltierN == _PELTIER_1){
@@ -23,6 +66,21 @@ void PWM_Peltier_SetPWM(uint16_t PeltierN, uint8_t HC, uint16_t PWM){
 			__HAL_TIM_SetCompare(&htim5, TIM_CHANNEL_2, PWM);
 		}
 
+	}else if(PeltierN == _PELTIER_2){
+		//PELTIER_2
+	}else if(PeltierN == _PELTIER_3){
+		//PELTIER_3
+	}else if(PeltierN == _PELTIER_4){
+		//PELTIER_4
+	}else{
+		//PELTIER_5
+	}
+}
+
+void PWM_Peltier_Start(uint16_t PeltierN){
+	if(PeltierN == _PELTIER_1){
+		HAL_TIM_PWM_Start(&htim5, TIM_CHANNEL_1);
+		HAL_TIM_PWM_Start(&htim5, TIM_CHANNEL_2);
 	}else if(PeltierN == _PELTIER_2){
 		//PELTIER_2
 	}else if(PeltierN == _PELTIER_3){

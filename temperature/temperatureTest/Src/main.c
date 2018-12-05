@@ -52,21 +52,43 @@
 
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
-uint16_t temperature[5];
-uint8_t counter = 0;
+
+uint8_t temperature_in_buffer[3][5] = {{133,133,133,133,133},
+							  	  	  {133,133,133,133,133},
+									  {133,133,133,133,133}};
+uint8_t temperature_fb_buffer[3][5] = {{133,133,133,133,133},
+		  	  	  	  	  	  	  	  {133,133,133,133,133},
+									  {133,133,133,133,133}};
+uint8_t T_in_avg_data[5];
+uint8_t T_fb_avg_data[5];
+uint8_t T_in_buffer_pt = 0;
+uint8_t T_fb_buffer_pt = 0;
+uint8_t E_pointer = 0;
+uint8_t F_pointer = 0;
+int T_errorSum[5] = {0,0,0,0,0};
+uint8_t PeltierFlag = 0;
 uint8_t PWMduty = 0;
 uint16_t PeltierArrayHC_now = 0;
-uint16_t PeltierArrayPWM[5] ={100,0,0,0,0};
+uint16_t PeltierArrayPWM[5] ={300,0,0,0,0};
+uint16_t _PeltierArrayPWM[5] ={200,0,0,0,0};
+
+uint8_t temperature_inNfb[10];
+uint8_t * temperature_in = temperature_inNfb;
+uint8_t * temperature_fb = temperature_inNfb+5;
 
 uint8_t HEATING	= 1;
 uint8_t	COOLING	= 0;
-
 
 uint16_t	PELTIER_1 =	0x01;
 uint16_t	PELTIER_2 =	0x02;
 uint16_t	PELTIER_3 =	0x04;
 uint16_t	PELTIER_4 =	0x08;
 uint16_t	PELTIER_5 =	0x10;
+
+uint8_t tempV = 0;
+//with 10k resistor
+
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -80,19 +102,27 @@ void SystemClock_Config(void);
 /* USER CODE BEGIN 0 */
 void HAL_ADC_ConvCpltCallback(ADC_HandleTypeDef* hadc){
 	//deal with temperature data
+//	HAL_ADC_Start_DMA(&hadc, temperature_E, 5);
+	//temperature_E = HAL_ADC_GetValue(&hadc);
 }
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim){
 	if(htim->Instance == TIM5){
 		//pwm calculation
-		//if(!counter){
-		//PWM_Peltier_SetPeltierArray(uint16_t PeltierArray, uint16_t PeltierArrayHC_next, uint16_t * PeltierArrayHC_now, uint16_t * PeltierArrayPWM);
-			PWM_Peltier_SetPeltierArray(PELTIER_1,(PELTIER_1*HEATING),PeltierArrayPWM);
-		//}
-		HAL_TIM_PWM_Start(&htim5, TIM_CHANNEL_1);
-		HAL_TIM_PWM_Start(&htim5, TIM_CHANNEL_2);
-		counter++;
-		counter%=10;
+		PeltierFlag++;
+		PeltierFlag%=10;
+//		if(!counter){
+//		//PWM_Peltier_SetPeltierArray(uint16_t PeltierArray, uint16_t PeltierArrayHC_next, uint16_t * PeltierArrayHC_now, uint16_t * PeltierArrayPWM);
+//			if(temperature_E[1] > 120){
+//			PWM_Peltier_SetPeltierArray(PELTIER_1,(PELTIER_1*COOLING),PeltierArrayPWM);
+//			}else if(temperature_E[1]<118){
+//			PWM_Peltier_SetPeltierArray(PELTIER_1,(PELTIER_1*HEATING),_PeltierArrayPWM);
+//			}
+//		}
+//		HAL_TIM_PWM_Start(&htim5, TIM_CHANNEL_1);
+//		HAL_TIM_PWM_Start(&htim5, TIM_CHANNEL_2);
+		//HAL_ADC_Start_DMA(&hadc, temperature, 5);
+
 	}
 }
 /* USER CODE END 0 */
@@ -133,19 +163,26 @@ int main(void)
   HAL_TIM_Base_Start_IT(&htim5);
   HAL_TIM_PWM_Start(&htim5, TIM_CHANNEL_1);
   HAL_TIM_PWM_Start(&htim5, TIM_CHANNEL_2);
-  //HAL_ADC_Start_DMA(&hadc, temperature, 5);//need to adjust the sampling time
-
+  HAL_ADC_Start_DMA(&hadc, temperature_inNfb, 10);//need to adjust the sampling time
+  temperature_in = temperature_inNfb;
+  temperature_fb = temperature_inNfb+5;
+  //HAL_ADC_Start(&hadc);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-
+//	  tempV++;
   /* USER CODE END WHILE */
 
   /* USER CODE BEGIN 3 */
-
+	  if(PeltierFlag == 6){
+		  //FourPtAvg(5, temperature_in, temperature_in_buffer, &T_in_buffer_pt, T_in_avg_data);
+		  //FourPtAvg(5, temperature_fb, temperature_fb_buffer, &T_fb_buffer_pt, T_fb_avg_data);
+		  //PWM_Peltier_Control(T_in_avg_data, T_fb_avg_data, T_errorSum);
+		  PWM_Peltier_Control(temperature_in, temperature_fb, T_errorSum);
+	  }
   }
   /* USER CODE END 3 */
 

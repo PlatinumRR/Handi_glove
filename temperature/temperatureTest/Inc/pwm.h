@@ -5,11 +5,12 @@
 //#include "main.h"
 
 #define PWM_PERIOD 1000
+#define PWM_LIMIT 500
 #define TH 4
-#define P_H 128
+#define P_H 40
 #define I_H 1
-#define I_D_H 50
-#define P_C 4
+#define I_D_H 128
+#define P_C 40
 #define I_C 1
 #define I_D_C 128
 

@@ -3482,7 +3482,7 @@ LOAD /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.e
                 0x0000000008000000                g_pfnVectors
                 0x000000000800013c                . = ALIGN (0x4)
 
-.text           0x000000000800013c     0x23e0
+.text           0x000000000800013c     0x23c4
                 0x000000000800013c                . = ALIGN (0x4)
  *(.text)
  .text          0x000000000800013c       0x40 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
@@ -3671,199 +3671,199 @@ LOAD /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.e
                 0x0000000008002098       0x20 Src/pwm.o
                 0x0000000008002098                PWM_Peltier_Start
  .text.PWM_Peltier_Control
-                0x00000000080020b8       0xbc Src/pwm.o
+                0x00000000080020b8       0xa0 Src/pwm.o
                 0x00000000080020b8                PWM_Peltier_Control
  .text.HAL_MspInit
-                0x0000000008002174       0xa0 Src/stm32l1xx_hal_msp.o
-                0x0000000008002174                HAL_MspInit
+                0x0000000008002158       0xa0 Src/stm32l1xx_hal_msp.o
+                0x0000000008002158                HAL_MspInit
  .text.NMI_Handler
-                0x0000000008002214        0x2 Src/stm32l1xx_it.o
-                0x0000000008002214                NMI_Handler
+                0x00000000080021f8        0x2 Src/stm32l1xx_it.o
+                0x00000000080021f8                NMI_Handler
  .text.HardFault_Handler
-                0x0000000008002216        0x2 Src/stm32l1xx_it.o
-                0x0000000008002216                HardFault_Handler
+                0x00000000080021fa        0x2 Src/stm32l1xx_it.o
+                0x00000000080021fa                HardFault_Handler
  .text.MemManage_Handler
-                0x0000000008002218        0x2 Src/stm32l1xx_it.o
-                0x0000000008002218                MemManage_Handler
+                0x00000000080021fc        0x2 Src/stm32l1xx_it.o
+                0x00000000080021fc                MemManage_Handler
  .text.BusFault_Handler
-                0x000000000800221a        0x2 Src/stm32l1xx_it.o
-                0x000000000800221a                BusFault_Handler
+                0x00000000080021fe        0x2 Src/stm32l1xx_it.o
+                0x00000000080021fe                BusFault_Handler
  .text.UsageFault_Handler
-                0x000000000800221c        0x2 Src/stm32l1xx_it.o
-                0x000000000800221c                UsageFault_Handler
+                0x0000000008002200        0x2 Src/stm32l1xx_it.o
+                0x0000000008002200                UsageFault_Handler
  .text.SVC_Handler
-                0x000000000800221e        0x2 Src/stm32l1xx_it.o
-                0x000000000800221e                SVC_Handler
+                0x0000000008002202        0x2 Src/stm32l1xx_it.o
+                0x0000000008002202                SVC_Handler
  .text.DebugMon_Handler
-                0x0000000008002220        0x2 Src/stm32l1xx_it.o
-                0x0000000008002220                DebugMon_Handler
+                0x0000000008002204        0x2 Src/stm32l1xx_it.o
+                0x0000000008002204                DebugMon_Handler
  .text.PendSV_Handler
-                0x0000000008002222        0x2 Src/stm32l1xx_it.o
-                0x0000000008002222                PendSV_Handler
+                0x0000000008002206        0x2 Src/stm32l1xx_it.o
+                0x0000000008002206                PendSV_Handler
  .text.SysTick_Handler
-                0x0000000008002224        0xc Src/stm32l1xx_it.o
-                0x0000000008002224                SysTick_Handler
+                0x0000000008002208        0xc Src/stm32l1xx_it.o
+                0x0000000008002208                SysTick_Handler
  .text.DMA1_Channel1_IRQHandler
-                0x0000000008002230       0x10 Src/stm32l1xx_it.o
-                0x0000000008002230                DMA1_Channel1_IRQHandler
+                0x0000000008002214       0x10 Src/stm32l1xx_it.o
+                0x0000000008002214                DMA1_Channel1_IRQHandler
  .text.TIM5_IRQHandler
-                0x0000000008002240       0x10 Src/stm32l1xx_it.o
-                0x0000000008002240                TIM5_IRQHandler
+                0x0000000008002224       0x10 Src/stm32l1xx_it.o
+                0x0000000008002224                TIM5_IRQHandler
  .text.DMA2_Channel4_IRQHandler
-                0x0000000008002250       0x10 Src/stm32l1xx_it.o
-                0x0000000008002250                DMA2_Channel4_IRQHandler
+                0x0000000008002234       0x10 Src/stm32l1xx_it.o
+                0x0000000008002234                DMA2_Channel4_IRQHandler
  .text.DMA2_Channel5_IRQHandler
-                0x0000000008002260       0x10 Src/stm32l1xx_it.o
-                0x0000000008002260                DMA2_Channel5_IRQHandler
+                0x0000000008002244       0x10 Src/stm32l1xx_it.o
+                0x0000000008002244                DMA2_Channel5_IRQHandler
  .text.SystemInit
-                0x0000000008002270       0x48 Src/system_stm32l1xx.o
-                0x0000000008002270                SystemInit
+                0x0000000008002254       0x48 Src/system_stm32l1xx.o
+                0x0000000008002254                SystemInit
  .text.HAL_TIM_Base_MspInit
-                0x00000000080022b8       0xc0 Src/tim.o
-                0x00000000080022b8                HAL_TIM_Base_MspInit
+                0x000000000800229c       0xc0 Src/tim.o
+                0x000000000800229c                HAL_TIM_Base_MspInit
  .text.HAL_TIM_MspPostInit
-                0x0000000008002378       0x34 Src/tim.o
-                0x0000000008002378                HAL_TIM_MspPostInit
+                0x000000000800235c       0x34 Src/tim.o
+                0x000000000800235c                HAL_TIM_MspPostInit
  .text.MX_TIM5_Init
-                0x00000000080023ac       0xc4 Src/tim.o
-                0x00000000080023ac                MX_TIM5_Init
+                0x0000000008002390       0xc4 Src/tim.o
+                0x0000000008002390                MX_TIM5_Init
  .text.Reset_Handler
-                0x0000000008002470       0x48 startup/startup_stm32l152xc.o
-                0x0000000008002470                Reset_Handler
+                0x0000000008002454       0x48 startup/startup_stm32l152xc.o
+                0x0000000008002454                Reset_Handler
  .text.Default_Handler
-                0x00000000080024b8        0x2 startup/startup_stm32l152xc.o
-                0x00000000080024b8                DMA2_Channel3_IRQHandler
-                0x00000000080024b8                EXTI2_IRQHandler
-                0x00000000080024b8                COMP_ACQ_IRQHandler
-                0x00000000080024b8                TIM10_IRQHandler
-                0x00000000080024b8                USB_HP_IRQHandler
-                0x00000000080024b8                TIM6_IRQHandler
-                0x00000000080024b8                PVD_IRQHandler
-                0x00000000080024b8                EXTI3_IRQHandler
-                0x00000000080024b8                EXTI0_IRQHandler
-                0x00000000080024b8                I2C2_EV_IRQHandler
-                0x00000000080024b8                SPI1_IRQHandler
-                0x00000000080024b8                USB_FS_WKUP_IRQHandler
-                0x00000000080024b8                DMA2_Channel2_IRQHandler
-                0x00000000080024b8                DMA1_Channel4_IRQHandler
-                0x00000000080024b8                ADC1_IRQHandler
-                0x00000000080024b8                USART3_IRQHandler
-                0x00000000080024b8                DMA1_Channel7_IRQHandler
-                0x00000000080024b8                LCD_IRQHandler
-                0x00000000080024b8                TIM4_IRQHandler
-                0x00000000080024b8                DMA2_Channel1_IRQHandler
-                0x00000000080024b8                I2C1_EV_IRQHandler
-                0x00000000080024b8                DMA1_Channel6_IRQHandler
-                0x00000000080024b8                TIM3_IRQHandler
-                0x00000000080024b8                RCC_IRQHandler
-                0x00000000080024b8                Default_Handler
-                0x00000000080024b8                EXTI15_10_IRQHandler
-                0x00000000080024b8                TIM7_IRQHandler
-                0x00000000080024b8                EXTI9_5_IRQHandler
-                0x00000000080024b8                TIM9_IRQHandler
-                0x00000000080024b8                TAMPER_STAMP_IRQHandler
-                0x00000000080024b8                RTC_WKUP_IRQHandler
-                0x00000000080024b8                SPI2_IRQHandler
-                0x00000000080024b8                DMA1_Channel5_IRQHandler
-                0x00000000080024b8                USB_LP_IRQHandler
-                0x00000000080024b8                EXTI4_IRQHandler
-                0x00000000080024b8                DMA1_Channel3_IRQHandler
-                0x00000000080024b8                COMP_IRQHandler
-                0x00000000080024b8                WWDG_IRQHandler
-                0x00000000080024b8                TIM2_IRQHandler
-                0x00000000080024b8                DAC_IRQHandler
-                0x00000000080024b8                EXTI1_IRQHandler
-                0x00000000080024b8                TIM11_IRQHandler
-                0x00000000080024b8                USART2_IRQHandler
-                0x00000000080024b8                I2C2_ER_IRQHandler
-                0x00000000080024b8                DMA1_Channel2_IRQHandler
-                0x00000000080024b8                FLASH_IRQHandler
-                0x00000000080024b8                USART1_IRQHandler
-                0x00000000080024b8                SPI3_IRQHandler
-                0x00000000080024b8                I2C1_ER_IRQHandler
-                0x00000000080024b8                RTC_Alarm_IRQHandler
- *fill*         0x00000000080024ba        0x2 
+                0x000000000800249c        0x2 startup/startup_stm32l152xc.o
+                0x000000000800249c                DMA2_Channel3_IRQHandler
+                0x000000000800249c                EXTI2_IRQHandler
+                0x000000000800249c                COMP_ACQ_IRQHandler
+                0x000000000800249c                TIM10_IRQHandler
+                0x000000000800249c                USB_HP_IRQHandler
+                0x000000000800249c                TIM6_IRQHandler
+                0x000000000800249c                PVD_IRQHandler
+                0x000000000800249c                EXTI3_IRQHandler
+                0x000000000800249c                EXTI0_IRQHandler
+                0x000000000800249c                I2C2_EV_IRQHandler
+                0x000000000800249c                SPI1_IRQHandler
+                0x000000000800249c                USB_FS_WKUP_IRQHandler
+                0x000000000800249c                DMA2_Channel2_IRQHandler
+                0x000000000800249c                DMA1_Channel4_IRQHandler
+                0x000000000800249c                ADC1_IRQHandler
+                0x000000000800249c                USART3_IRQHandler
+                0x000000000800249c                DMA1_Channel7_IRQHandler
+                0x000000000800249c                LCD_IRQHandler
+                0x000000000800249c                TIM4_IRQHandler
+                0x000000000800249c                DMA2_Channel1_IRQHandler
+                0x000000000800249c                I2C1_EV_IRQHandler
+                0x000000000800249c                DMA1_Channel6_IRQHandler
+                0x000000000800249c                TIM3_IRQHandler
+                0x000000000800249c                RCC_IRQHandler
+                0x000000000800249c                Default_Handler
+                0x000000000800249c                EXTI15_10_IRQHandler
+                0x000000000800249c                TIM7_IRQHandler
+                0x000000000800249c                EXTI9_5_IRQHandler
+                0x000000000800249c                TIM9_IRQHandler
+                0x000000000800249c                TAMPER_STAMP_IRQHandler
+                0x000000000800249c                RTC_WKUP_IRQHandler
+                0x000000000800249c                SPI2_IRQHandler
+                0x000000000800249c                DMA1_Channel5_IRQHandler
+                0x000000000800249c                USB_LP_IRQHandler
+                0x000000000800249c                EXTI4_IRQHandler
+                0x000000000800249c                DMA1_Channel3_IRQHandler
+                0x000000000800249c                COMP_IRQHandler
+                0x000000000800249c                WWDG_IRQHandler
+                0x000000000800249c                TIM2_IRQHandler
+                0x000000000800249c                DAC_IRQHandler
+                0x000000000800249c                EXTI1_IRQHandler
+                0x000000000800249c                TIM11_IRQHandler
+                0x000000000800249c                USART2_IRQHandler
+                0x000000000800249c                I2C2_ER_IRQHandler
+                0x000000000800249c                DMA1_Channel2_IRQHandler
+                0x000000000800249c                FLASH_IRQHandler
+                0x000000000800249c                USART1_IRQHandler
+                0x000000000800249c                SPI3_IRQHandler
+                0x000000000800249c                I2C1_ER_IRQHandler
+                0x000000000800249c                RTC_Alarm_IRQHandler
+ *fill*         0x000000000800249e        0x2 
  .text.__libc_init_array
-                0x00000000080024bc       0x48 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-init.o)
-                0x00000000080024bc                __libc_init_array
+                0x00000000080024a0       0x48 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-init.o)
+                0x00000000080024a0                __libc_init_array
  *(.glue_7)
- .glue_7        0x0000000008002504        0x0 linker stubs
+ .glue_7        0x00000000080024e8        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x0000000008002504        0x0 linker stubs
+ .glue_7t       0x00000000080024e8        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x0000000008002504        0x0 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
+ .eh_frame      0x00000000080024e8        0x0 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
  *(.init)
- .init          0x0000000008002504        0x4 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crti.o
-                0x0000000008002504                _init
- .init          0x0000000008002508        0x8 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtn.o
+ .init          0x00000000080024e8        0x4 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crti.o
+                0x00000000080024e8                _init
+ .init          0x00000000080024ec        0x8 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtn.o
  *(.fini)
- .fini          0x0000000008002510        0x4 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crti.o
-                0x0000000008002510                _fini
- .fini          0x0000000008002514        0x8 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtn.o
-                0x000000000800251c                . = ALIGN (0x4)
-                0x000000000800251c                _etext = .
+ .fini          0x00000000080024f4        0x4 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crti.o
+                0x00000000080024f4                _fini
+ .fini          0x00000000080024f8        0x8 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtn.o
+                0x0000000008002500                . = ALIGN (0x4)
+                0x0000000008002500                _etext = .
 
-.vfp11_veneer   0x000000000800251c        0x0
- .vfp11_veneer  0x000000000800251c        0x0 linker stubs
+.vfp11_veneer   0x0000000008002500        0x0
+ .vfp11_veneer  0x0000000008002500        0x0 linker stubs
 
-.v4_bx          0x000000000800251c        0x0
- .v4_bx         0x000000000800251c        0x0 linker stubs
+.v4_bx          0x0000000008002500        0x0
+ .v4_bx         0x0000000008002500        0x0 linker stubs
 
-.iplt           0x000000000800251c        0x0
- .iplt          0x000000000800251c        0x0 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
+.iplt           0x0000000008002500        0x0
+ .iplt          0x0000000008002500        0x0 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
 
-.rodata         0x000000000800251c      0x154
-                0x000000000800251c                . = ALIGN (0x4)
+.rodata         0x0000000008002500      0x154
+                0x0000000008002500                . = ALIGN (0x4)
  *(.rodata)
- .rodata        0x000000000800251c      0x100 Src/pwm.o
- .rodata        0x000000000800261c       0x24 Src/system_stm32l1xx.o
-                0x000000000800261c                PLLMulTable
-                0x0000000008002628                AHBPrescTable
-                0x0000000008002638                APBPrescTable
+ .rodata        0x0000000008002500      0x100 Src/pwm.o
+ .rodata        0x0000000008002600       0x24 Src/system_stm32l1xx.o
+                0x0000000008002600                PLLMulTable
+                0x000000000800260c                AHBPrescTable
+                0x000000000800261c                APBPrescTable
  *(.rodata*)
  .rodata.str1.4
-                0x0000000008002640        0xd Src/adc.o
- *fill*         0x000000000800264d        0x3 
+                0x0000000008002624        0xd Src/adc.o
+ *fill*         0x0000000008002631        0x3 
  .rodata.str1.4
-                0x0000000008002650        0xe Src/main.o
- *fill*         0x000000000800265e        0x2 
+                0x0000000008002634        0xe Src/main.o
+ *fill*         0x0000000008002642        0x2 
  .rodata.str1.4
-                0x0000000008002660       0x10 Src/tim.o
+                0x0000000008002644       0x10 Src/tim.o
                                           0xd (size before relaxing)
-                0x0000000008002670                . = ALIGN (0x4)
+                0x0000000008002654                . = ALIGN (0x4)
 
-.rel.dyn        0x0000000008002670        0x0
- .rel.iplt      0x0000000008002670        0x0 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
+.rel.dyn        0x0000000008002654        0x0
+ .rel.iplt      0x0000000008002654        0x0 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
 
-.ARM            0x0000000008002670        0x0
-                0x0000000008002670                __exidx_start = .
+.ARM            0x0000000008002654        0x0
+                0x0000000008002654                __exidx_start = .
  *(.ARM.exidx*)
-                0x0000000008002670                __exidx_end = .
+                0x0000000008002654                __exidx_end = .
 
-.preinit_array  0x0000000008002670        0x0
-                0x0000000008002670                PROVIDE (__preinit_array_start, .)
+.preinit_array  0x0000000008002654        0x0
+                0x0000000008002654                PROVIDE (__preinit_array_start, .)
  *(.preinit_array*)
-                0x0000000008002670                PROVIDE (__preinit_array_end, .)
+                0x0000000008002654                PROVIDE (__preinit_array_end, .)
 
-.init_array     0x0000000008002670        0x4
-                0x0000000008002670                PROVIDE (__init_array_start, .)
+.init_array     0x0000000008002654        0x4
+                0x0000000008002654                PROVIDE (__init_array_start, .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x0000000008002670        0x4 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
-                0x0000000008002674                PROVIDE (__init_array_end, .)
+ .init_array    0x0000000008002654        0x4 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
+                0x0000000008002658                PROVIDE (__init_array_end, .)
 
-.fini_array     0x0000000008002674        0x4
+.fini_array     0x0000000008002658        0x4
                 [!provide]                        PROVIDE (__fini_array_start, .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x0000000008002674        0x4 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
+ .fini_array    0x0000000008002658        0x4 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
                 [!provide]                        PROVIDE (__fini_array_end, .)
-                0x0000000008002678                _sidata = LOADADDR (.data)
+                0x000000000800265c                _sidata = LOADADDR (.data)
 
-.data           0x0000000020000000       0x50 load address 0x0000000008002678
+.data           0x0000000020000000       0x50 load address 0x000000000800265c
                 0x0000000020000000                . = ALIGN (0x4)
                 0x0000000020000000                _sdata = .
  *(.data)
@@ -3887,11 +3887,11 @@ LOAD /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.e
                 0x0000000020000050                . = ALIGN (0x4)
                 0x0000000020000050                _edata = .
 
-.igot.plt       0x0000000020000050        0x0 load address 0x00000000080026c8
+.igot.plt       0x0000000020000050        0x0 load address 0x00000000080026ac
  .igot.plt      0x0000000020000050        0x0 /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtbegin.o
                 0x0000000020000050                . = ALIGN (0x4)
 
-.bss            0x0000000020000050      0x1b8 load address 0x00000000080026c8
+.bss            0x0000000020000050      0x1b8 load address 0x00000000080026ac
                 0x0000000020000050                _sbss = .
                 0x0000000020000050                __bss_start__ = _sbss
  *(.bss)
@@ -3929,7 +3929,7 @@ LOAD /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.e
                 0x0000000020000208                __bss_end__ = _ebss
 
 ._user_heap_stack
-                0x0000000020000208      0x600 load address 0x00000000080026c8
+                0x0000000020000208      0x600 load address 0x00000000080026ac
                 0x0000000020000208                . = ALIGN (0x8)
                 [!provide]                        PROVIDE (end, .)
                 [!provide]                        PROVIDE (_end, .)
@@ -3993,7 +3993,7 @@ LOAD /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.e
                 0x00000000000003fb       0x1d /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/thumb/v7-m/crtn.o
 OUTPUT(temperatureTest.elf elf32-littlearm)
 
-.debug_info     0x0000000000000000    0x155f7
+.debug_info     0x0000000000000000    0x155cc
  .debug_info    0x0000000000000000      0xeca Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal.o
  .debug_info    0x0000000000000eca     0x18aa Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_adc.o
  .debug_info    0x0000000000002774     0x16d8 Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_cortex.o
@@ -4006,12 +4006,12 @@ OUTPUT(temperatureTest.elf elf32-littlearm)
  .debug_info    0x000000000000d4d6      0xca4 Src/dma.o
  .debug_info    0x000000000000e17a      0xa8e Src/gpio.o
  .debug_info    0x000000000000ec08     0x19aa Src/main.o
- .debug_info    0x00000000000105b2     0x115f Src/pwm.o
- .debug_info    0x0000000000011711      0xd11 Src/stm32l1xx_hal_msp.o
- .debug_info    0x0000000000012422      0xf4d Src/stm32l1xx_it.o
- .debug_info    0x000000000001336f      0xc76 Src/system_stm32l1xx.o
- .debug_info    0x0000000000013fe5     0x15f0 Src/tim.o
- .debug_info    0x00000000000155d5       0x22 startup/startup_stm32l152xc.o
+ .debug_info    0x00000000000105b2     0x1134 Src/pwm.o
+ .debug_info    0x00000000000116e6      0xd11 Src/stm32l1xx_hal_msp.o
+ .debug_info    0x00000000000123f7      0xf4d Src/stm32l1xx_it.o
+ .debug_info    0x0000000000013344      0xc76 Src/system_stm32l1xx.o
+ .debug_info    0x0000000000013fba     0x15f0 Src/tim.o
+ .debug_info    0x00000000000155aa       0x22 startup/startup_stm32l152xc.o
 
 .debug_abbrev   0x0000000000000000     0x2c03
  .debug_abbrev  0x0000000000000000      0x2c9 Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal.o
@@ -4033,7 +4033,7 @@ OUTPUT(temperatureTest.elf elf32-littlearm)
  .debug_abbrev  0x0000000000002974      0x27d Src/tim.o
  .debug_abbrev  0x0000000000002bf1       0x12 startup/startup_stm32l152xc.o
 
-.debug_loc      0x0000000000000000     0x60e9
+.debug_loc      0x0000000000000000     0x60c3
  .debug_loc     0x0000000000000000       0x6a Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal.o
  .debug_loc     0x000000000000006a      0x8a1 Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_adc.o
  .debug_loc     0x000000000000090b      0x5ce Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_cortex.o
@@ -4044,9 +4044,9 @@ OUTPUT(temperatureTest.elf elf32-littlearm)
  .debug_loc     0x0000000000005a82       0xa0 Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_tim_ex.o
  .debug_loc     0x0000000000005b22       0x4a Src/adc.o
  .debug_loc     0x0000000000005b6c       0x3a Src/main.o
- .debug_loc     0x0000000000005ba6      0x349 Src/pwm.o
- .debug_loc     0x0000000000005eef      0x18f Src/system_stm32l1xx.o
- .debug_loc     0x000000000000607e       0x6b Src/tim.o
+ .debug_loc     0x0000000000005ba6      0x323 Src/pwm.o
+ .debug_loc     0x0000000000005ec9      0x18f Src/system_stm32l1xx.o
+ .debug_loc     0x0000000000006058       0x6b Src/tim.o
 
 .debug_aranges  0x0000000000000000      0x958
  .debug_aranges
@@ -4106,7 +4106,7 @@ OUTPUT(temperatureTest.elf elf32-littlearm)
  .debug_ranges  0x00000000000008a8       0x28 Src/tim.o
  .debug_ranges  0x00000000000008d0       0x20 startup/startup_stm32l152xc.o
 
-.debug_macro    0x0000000000000000    0x181c2
+.debug_macro    0x0000000000000000    0x181ce
  .debug_macro   0x0000000000000000      0x327 Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal.o
  .debug_macro   0x0000000000000327      0xa60 Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal.o
  .debug_macro   0x0000000000000d87       0x22 Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal.o
@@ -4176,17 +4176,17 @@ OUTPUT(temperatureTest.elf elf32-littlearm)
  .debug_macro   0x0000000000016873      0x30d Src/dma.o
  .debug_macro   0x0000000000016b80      0x30d Src/gpio.o
  .debug_macro   0x0000000000016e8d      0x338 Src/main.o
- .debug_macro   0x00000000000171c5       0x3a Src/main.o
- .debug_macro   0x00000000000171ff      0x31c Src/pwm.o
- .debug_macro   0x000000000001751b       0x34 Src/pwm.o
- .debug_macro   0x000000000001754f      0x303 Src/stm32l1xx_hal_msp.o
- .debug_macro   0x0000000000017852      0x30d Src/stm32l1xx_it.o
- .debug_macro   0x0000000000017b5f      0x308 Src/system_stm32l1xx.o
- .debug_macro   0x0000000000017e67       0x34 Src/system_stm32l1xx.o
- .debug_macro   0x0000000000017e9b       0x10 Src/system_stm32l1xx.o
- .debug_macro   0x0000000000017eab      0x317 Src/tim.o
+ .debug_macro   0x00000000000171c5       0x40 Src/main.o
+ .debug_macro   0x0000000000017205      0x31c Src/pwm.o
+ .debug_macro   0x0000000000017521       0x3a Src/pwm.o
+ .debug_macro   0x000000000001755b      0x303 Src/stm32l1xx_hal_msp.o
+ .debug_macro   0x000000000001785e      0x30d Src/stm32l1xx_it.o
+ .debug_macro   0x0000000000017b6b      0x308 Src/system_stm32l1xx.o
+ .debug_macro   0x0000000000017e73       0x34 Src/system_stm32l1xx.o
+ .debug_macro   0x0000000000017ea7       0x10 Src/system_stm32l1xx.o
+ .debug_macro   0x0000000000017eb7      0x317 Src/tim.o
 
-.debug_line     0x0000000000000000     0xbe36
+.debug_line     0x0000000000000000     0xbe30
  .debug_line    0x0000000000000000      0xa5e Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal.o
  .debug_line    0x0000000000000a5e      0xdd1 Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_adc.o
  .debug_line    0x000000000000182f      0xb3a Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_cortex.o
@@ -4199,14 +4199,14 @@ OUTPUT(temperatureTest.elf elf32-littlearm)
  .debug_line    0x0000000000007304      0x8f7 Src/dma.o
  .debug_line    0x0000000000007bfb      0x8f4 Src/gpio.o
  .debug_line    0x00000000000084ef      0x98b Src/main.o
- .debug_line    0x0000000000008e7a      0x9d3 Src/pwm.o
- .debug_line    0x000000000000984d      0x8ff Src/stm32l1xx_hal_msp.o
- .debug_line    0x000000000000a14c      0x9cf Src/stm32l1xx_it.o
- .debug_line    0x000000000000ab1b      0x927 Src/system_stm32l1xx.o
- .debug_line    0x000000000000b442      0x977 Src/tim.o
- .debug_line    0x000000000000bdb9       0x7d startup/startup_stm32l152xc.o
+ .debug_line    0x0000000000008e7a      0x9cd Src/pwm.o
+ .debug_line    0x0000000000009847      0x8ff Src/stm32l1xx_hal_msp.o
+ .debug_line    0x000000000000a146      0x9cf Src/stm32l1xx_it.o
+ .debug_line    0x000000000000ab15      0x927 Src/system_stm32l1xx.o
+ .debug_line    0x000000000000b43c      0x977 Src/tim.o
+ .debug_line    0x000000000000bdb3       0x7d startup/startup_stm32l152xc.o
 
-.debug_str      0x0000000000000000    0x8c85b
+.debug_str      0x0000000000000000    0x8c86a
  .debug_str     0x0000000000000000    0x89ef0 Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal.o
                                       0x8a288 (size before relaxing)
  .debug_str     0x0000000000089ef0      0x706 Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_adc.o
@@ -4229,19 +4229,19 @@ OUTPUT(temperatureTest.elf elf32-littlearm)
                                       0x89f0b (size before relaxing)
  .debug_str     0x000000000008c323       0x1b Src/gpio.o
                                       0x89b9f (size before relaxing)
- .debug_str     0x000000000008c33e      0x1f8 Src/main.o
-                                      0x8a8bf (size before relaxing)
- .debug_str     0x000000000008c536       0xb8 Src/pwm.o
-                                      0x8a091 (size before relaxing)
- .debug_str     0x000000000008c5ee       0x1b Src/stm32l1xx_hal_msp.o
+ .debug_str     0x000000000008c33e      0x207 Src/main.o
+                                      0x8a8ce (size before relaxing)
+ .debug_str     0x000000000008c545       0xb8 Src/pwm.o
+                                      0x8a0a0 (size before relaxing)
+ .debug_str     0x000000000008c5fd       0x1b Src/stm32l1xx_hal_msp.o
                                       0x89f1a (size before relaxing)
- .debug_str     0x000000000008c609      0x12f Src/stm32l1xx_it.o
+ .debug_str     0x000000000008c618      0x12f Src/stm32l1xx_it.o
                                       0x8a034 (size before relaxing)
- .debug_str     0x000000000008c738       0x72 Src/system_stm32l1xx.o
+ .debug_str     0x000000000008c747       0x72 Src/system_stm32l1xx.o
                                       0x89c43 (size before relaxing)
- .debug_str     0x000000000008c7aa       0x44 Src/tim.o
+ .debug_str     0x000000000008c7b9       0x44 Src/tim.o
                                       0x8a590 (size before relaxing)
- .debug_str     0x000000000008c7ee       0x6d startup/startup_stm32l152xc.o
+ .debug_str     0x000000000008c7fd       0x6d startup/startup_stm32l152xc.o
 
 .comment        0x0000000000000000       0x7e
  .comment       0x0000000000000000       0x7e Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal.o
@@ -4263,7 +4263,7 @@ OUTPUT(temperatureTest.elf elf32-littlearm)
  .comment       0x000000000000007e       0x7f Src/system_stm32l1xx.o
  .comment       0x000000000000007e       0x7f Src/tim.o
 
-.debug_frame    0x0000000000000000     0x1730
+.debug_frame    0x0000000000000000     0x172c
  .debug_frame   0x0000000000000000      0x168 Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal.o
  .debug_frame   0x0000000000000168      0x2d8 Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_adc.o
  .debug_frame   0x0000000000000440      0x15c Drivers/STM32L1xx_HAL_Driver/Src/stm32l1xx_hal_cortex.o
@@ -4276,9 +4276,9 @@ OUTPUT(temperatureTest.elf elf32-littlearm)
  .debug_frame   0x00000000000013b4       0x2c Src/dma.o
  .debug_frame   0x00000000000013e0       0x28 Src/gpio.o
  .debug_frame   0x0000000000001408       0x78 Src/main.o
- .debug_frame   0x0000000000001480       0x98 Src/pwm.o
- .debug_frame   0x0000000000001518       0x2c Src/stm32l1xx_hal_msp.o
- .debug_frame   0x0000000000001544      0x108 Src/stm32l1xx_it.o
- .debug_frame   0x000000000000164c       0x30 Src/system_stm32l1xx.o
- .debug_frame   0x000000000000167c       0x88 Src/tim.o
- .debug_frame   0x0000000000001704       0x2c /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-init.o)
+ .debug_frame   0x0000000000001480       0x94 Src/pwm.o
+ .debug_frame   0x0000000000001514       0x2c Src/stm32l1xx_hal_msp.o
+ .debug_frame   0x0000000000001540      0x108 Src/stm32l1xx_it.o
+ .debug_frame   0x0000000000001648       0x30 Src/system_stm32l1xx.o
+ .debug_frame   0x0000000000001678       0x88 Src/tim.o
+ .debug_frame   0x0000000000001700       0x2c /Applications/Ac6/SystemWorkbench.app/Contents/Eclipse/plugins/fr.ac6.mcu.externaltools.arm-none.macos64_1.16.0.201807130628/tools/compiler/bin/../lib/gcc/arm-none-eabi/7.2.1/../../../../arm-none-eabi/lib/thumb/v7-m/libc_nano.a(lib_a-init.o)

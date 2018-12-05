@@ -19,7 +19,7 @@ void FourPtAvg(uint8_t N, uint8_t * ADC_data, uint8_t ADC_data_buffer[][5], uint
 }
 
 void PWM_Peltier_Control(uint8_t * avg_in_data, uint8_t * avg_fb_data, int * errorSum){
-	int PWM;
+	int PWM = 0;
 	int tempPWM;
 	uint16_t PeltierN = 1;
 	int e;
@@ -33,20 +33,19 @@ void PWM_Peltier_Control(uint8_t * avg_in_data, uint8_t * avg_fb_data, int * err
 
 			tempPWM = P_H*e + I_H*(errorSum[i])/I_D_H;
 			//choose Heating or Cooling and limit the PWM duty below period
-			if(tempPWM>PWM_PERIOD) {
-				PWM=PWM_PERIOD;
+			if(tempPWM>PWM_LIMIT) {
+				PWM=PWM_LIMIT;
 				HC = _HEATING;
 			}else if(tempPWM>0) {
 				PWM=tempPWM;
 				HC = _HEATING;
-			}else if(tempPWM>(PWM_PERIOD *(-1))) {
+			}else if(tempPWM>(PWM_LIMIT *(-1))) {
 				PWM=tempPWM*(-1);
 				HC = _COOLING;
 			}else {
-				PWM= PWM_PERIOD*(-1);
+				PWM= PWM_LIMIT;
 				HC = _COOLING;
-			}PWM_Peltier_SetPWM(PeltierN, _HEATING, PWM);
-
+			}
 			PWM_Peltier_SetPWM(PeltierN, HC, PWM);
 
 //			PWM_Peltier_SetPWM(PeltierN, _COOLING, 0);
